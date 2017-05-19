@@ -10,12 +10,20 @@
 
 @implementation LOTabBar
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+-(instancetype)initWithFrame:(CGRect)frame{
+
+    self = [super initWithFrame:frame];
+    if (self) {
+        
+        if (!iOS7) { // 非iOS7下,设置tabbar的背景
+            self.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageWithName:@"tabbar_background"]];
+        }
+
+        
+    }
+   return self;
+
 }
-*/
+
 
 @end

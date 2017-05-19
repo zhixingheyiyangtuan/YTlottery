@@ -10,4 +10,6 @@
 
 @interface LOTabBar : UIView
 
+@property(nonatomic,strong) UITabBarItem *item;
+
 @end

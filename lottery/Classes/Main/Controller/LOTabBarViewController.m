@@ -95,6 +95,9 @@
     // 3.添加tabbar内部的按钮
 //    [self.customTabBar addTabBarButtonWithItem:childVc.tabBarItem];
     
+    self.customTabBar.item = childVc.tabBarItem;
+    
+    NSLog(@"===%@",childVc.tabBarItem);
     
 }
 
