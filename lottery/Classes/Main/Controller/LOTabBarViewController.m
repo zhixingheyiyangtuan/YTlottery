@@ -12,9 +12,12 @@
 #import "LOMeViewController.h"
 #import "LODiscoverVC.h"
 #import "LONavigationController.h"
+#import "LOTabBar.h"
+
 
 @interface LOTabBarViewController ()
 
+@property(nonatomic,weak)LOTabBar *customTabBar;
 @end
 
 @implementation LOTabBarViewController
@@ -22,8 +25,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    // 初始化tabbar
+    [self setupTabbar];
     //初始化所有的字控制器
     [self setupAllChildViewControllers];
+}
+
+/**
+ * 初始化tabbar
+ */
+
+-(void)setupTabbar{
+    LOTabBar *customTabBar = [[LOTabBar alloc]init];
+    customTabBar.frame = self.tabBar.bounds;
+    [self.tabBar addSubview:customTabBar];
+
+
+
 }
 
 -(void)setupAllChildViewControllers{
@@ -64,9 +82,9 @@
     // 1.设置控制器的属性
     childVc.title = title;
     // 设置图标
-    childVc.tabBarItem.image = [UIImage imageNamed:imageName];
+    childVc.tabBarItem.image = [UIImage imageWithName:imageName];
     // 设置选中的图标
-    UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
+    UIImage *selectedImage = [UIImage imageWithName:selectedImageName];
   
     childVc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
    

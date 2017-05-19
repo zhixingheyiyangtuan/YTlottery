@@ -1,0 +1,16 @@
+//
+//  LOPrefixHeader.pch
+//  lottery
+//
+//  Created by 杨湍 on 2017/5/19.
+//  Copyright © 2017年 杨湍. All rights reserved.
+//
+
+#ifndef LOPrefixHeader_pch
+#define LOPrefixHeader_pch
+
+
+#import "UIImage+LO.h"
+#import "lottery.h"
+
+#endif /* LOPrefixHeader_pch */
