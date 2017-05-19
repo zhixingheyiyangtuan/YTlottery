@@ -1,0 +1,83 @@
+//
+//  LOTabBarViewController.m
+//  lottery
+//
+//  Created by 杨湍 on 2017/5/19.
+//  Copyright © 2017年 杨湍. All rights reserved.
+//
+
+#import "LOTabBarViewController.h"
+#import "LOHomeVC.h"
+#import "LOMessageVC.h"
+#import "LOMeViewController.h"
+#import "LODiscoverVC.h"
+#import "LONavigationController.h"
+
+@interface LOTabBarViewController ()
+
+@end
+
+@implementation LOTabBarViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view.
+    //初始化所有的字控制器
+    [self setupAllChildViewControllers];
+}
+
+-(void)setupAllChildViewControllers{
+    
+    // 1.首页
+    LOHomeVC *homeVC = [[LOHomeVC alloc] init];
+    [self setupChildViewController:homeVC title:@"首页" imageName:@"tabbar_home" selectedImageName:@"tabbar_home_selected"];
+
+    
+    // 2.消息
+    LOMessageVC *messageVC = [[LOMessageVC alloc] init];
+    [self setupChildViewController:messageVC title:@"消息" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+    
+    // 3.广场
+    LODiscoverVC *discoverVC = [[LODiscoverVC alloc] init];
+    [self setupChildViewController:discoverVC title:@"广场" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
+    
+    // 4.我
+    LOMessageVC *meVC = [[LOMessageVC alloc] init];
+    [self setupChildViewController:meVC title:@"我" imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected"];
+
+
+
+
+}
+
+/**
+ *  初始化一个子控制器
+ *
+ *  @param childVc           需要初始化的子控制器
+ *  @param title             标题
+ *  @param imageName         图标
+ *  @param selectedImageName 选中的图标
+ */
+- (void)setupChildViewController:(UIViewController *)childVc title:(NSString *)title imageName:(NSString *)imageName selectedImageName:(NSString *)selectedImageName
+{
+    
+    // 1.设置控制器的属性
+    childVc.title = title;
+    // 设置图标
+    childVc.tabBarItem.image = [UIImage imageNamed:imageName];
+    // 设置选中的图标
+    UIImage *selectedImage = [UIImage imageNamed:selectedImageName];
+  
+    childVc.tabBarItem.selectedImage = [selectedImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+   
+    // 2.包装一个导航控制器
+    LONavigationController *nav = [[LONavigationController alloc] initWithRootViewController:childVc];
+    [self addChildViewController:nav];
+    
+    // 3.添加tabbar内部的按钮
+//    [self.customTabBar addTabBarButtonWithItem:childVc.tabBarItem];
+    
+    
+}
+
+@end
