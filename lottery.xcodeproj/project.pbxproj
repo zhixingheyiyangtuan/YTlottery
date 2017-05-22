@@ -13,6 +13,8 @@
 		5E286DEC1ED2822200C56219 /* HomePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E286DEB1ED2822200C56219 /* HomePage.plist */; };
 		5E3AF85D1ED2C3DE001000A0 /* AFNHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF85C1ED2C3DE001000A0 /* AFNHttpTools.m */; };
 		5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */; };
+		5E3AF8631ED2D745001000A0 /* LOHomeItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF8621ED2D745001000A0 /* LOHomeItemDetailVC.m */; };
+		5E3AF8661ED2E276001000A0 /* LOHomeDetailTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */; };
 		5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */; };
 		5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */; };
 		5E76FE601ECED9B3004FDA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FE5F1ECED9B3004FDA36 /* main.m */; };
@@ -41,6 +43,10 @@
 		5E3AF85C1ED2C3DE001000A0 /* AFNHttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttpTools.m; sourceTree = "<group>"; };
 		5E3AF85E1ED2CFE2001000A0 /* LOHomeItemDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeItemDetailModel.h; sourceTree = "<group>"; };
 		5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeItemDetailModel.m; sourceTree = "<group>"; };
+		5E3AF8611ED2D745001000A0 /* LOHomeItemDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeItemDetailVC.h; sourceTree = "<group>"; };
+		5E3AF8621ED2D745001000A0 /* LOHomeItemDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeItemDetailVC.m; sourceTree = "<group>"; };
+		5E3AF8641ED2E276001000A0 /* LOHomeDetailTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeDetailTopCell.h; sourceTree = "<group>"; };
+		5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailTopCell.m; sourceTree = "<group>"; };
 		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
 		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
 		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
@@ -188,6 +194,8 @@
 			children = (
 				5E76FE971ECEE411004FDA36 /* LOHomeVC.h */,
 				5E76FE981ECEE411004FDA36 /* LOHomeVC.m */,
+				5E3AF8611ED2D745001000A0 /* LOHomeItemDetailVC.h */,
+				5E3AF8621ED2D745001000A0 /* LOHomeItemDetailVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -208,6 +216,8 @@
 			children = (
 				5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */,
 				5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */,
+				5E3AF8641ED2E276001000A0 /* LOHomeDetailTopCell.h */,
+				5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,6 +507,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3AF8631ED2D745001000A0 /* LOHomeItemDetailVC.m in Sources */,
 				5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */,
 				5E76FE961ECEE3F9004FDA36 /* LOMessageVC.m in Sources */,
 				5E76FEA21ECEE70B004FDA36 /* LONavigationController.m in Sources */,
@@ -506,6 +517,7 @@
 				5E76FEAA1ECEEE57004FDA36 /* UIImage+LO.m in Sources */,
 				5E76FEAE1ECEF73D004FDA36 /* LOTabBarButton.m in Sources */,
 				5E76FE991ECEE411004FDA36 /* LOHomeVC.m in Sources */,
+				5E3AF8661ED2E276001000A0 /* LOHomeDetailTopCell.m in Sources */,
 				5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */,
 				5E76FE9F1ECEE546004FDA36 /* LOTabBar.m in Sources */,
 				5E286DEA1ED27D1000C56219 /* UIButton+touch.m in Sources */,

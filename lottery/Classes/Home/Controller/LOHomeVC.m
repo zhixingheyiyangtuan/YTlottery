@@ -6,11 +6,14 @@
 //  Copyright © 2017年 杨湍. All rights reserved.
 //
 
-#import "LOHomeVC.h"
+
 #import "LOHomeMainModel.h"
+
+
 #import "LOHomeMainItemView.h"
-#import "AFNHttpTools.h"
-#import "LOHomeItemDetailModel.h"
+
+#import "LOHomeVC.h"
+#import "LOHomeItemDetailVC.h"
 
 @interface LOHomeVC ()<LOHomeMainItemViewDelegate>
 @property (nonatomic,strong)UICollectionView *collectionView;
@@ -52,30 +55,13 @@
 -(void)LOHomeMainItemViewDidSelectWith:(LOHomeMainModel *)model{
 
     
-    NSDictionary * paramDic = [NSDictionary dictionary];
+   LOHomeItemDetailVC * DetailVC = [[LOHomeItemDetailVC alloc]init];
     
-//      paramDic = @{@"period":@"2017056",
-//                   @"name":@"双色球"};
-    paramDic = @{
-                 @"name":model.text};
+    DetailVC.mainModel = model;
+    [self.navigationController pushViewController:DetailVC animated:YES];
     
-    [AFNHttpTools getDataWithUrl:lotteryRequestHeader andParameters:paramDic successed:^(NSDictionary *dict) {
-//        NSLog(@"%@",dict);
-        if ([dict[@"retCode"] isEqualToString:@"200"]) {
-                   
-       LOHomeItemDetailModel *tenP  = [LOHomeItemDetailModel mj_objectWithKeyValues:dict[@"result"]];
-            
-            NSLog(@"====%@",tenP);
-
-        }
-        
-        
-        
-    } failed:^(NSError *err) {
-        
-    }];
-
-
+    
+   
 
 }
 

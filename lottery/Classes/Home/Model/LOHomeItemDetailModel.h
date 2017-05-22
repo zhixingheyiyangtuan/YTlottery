@@ -33,11 +33,7 @@
 @end
 
 
-//{
-//    awardNumber = 8;
-//    awardPrice = 7035961;
-//    awards = "\U4e00\U7b49\U5956";
-//},
+
 
 @interface LOHomeLotteryDetailModel : NSObject
 
