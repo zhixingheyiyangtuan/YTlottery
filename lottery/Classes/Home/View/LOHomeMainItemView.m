@@ -149,7 +149,11 @@
 //UICollectionView被选中时调用的方法
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+     LOHomeMainModel *tempModel = self.collectionArr[indexPath.item];
     
+    if (_delegate && [_delegate respondsToSelector:@selector(LOHomeMainItemViewDidSelectWith:)]) {
+        [_delegate LOHomeMainItemViewDidSelectWith:tempModel];
+    }
     
 }
 

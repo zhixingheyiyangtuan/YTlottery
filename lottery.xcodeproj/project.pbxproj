@@ -11,6 +11,8 @@
 		5E286DE71ED27B8100C56219 /* ParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E286DE61ED27B8100C56219 /* ParentViewController.m */; };
 		5E286DEA1ED27D1000C56219 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E286DE91ED27D1000C56219 /* UIButton+touch.m */; };
 		5E286DEC1ED2822200C56219 /* HomePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E286DEB1ED2822200C56219 /* HomePage.plist */; };
+		5E3AF85D1ED2C3DE001000A0 /* AFNHttpTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF85C1ED2C3DE001000A0 /* AFNHttpTools.m */; };
+		5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */; };
 		5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */; };
 		5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */; };
 		5E76FE601ECED9B3004FDA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FE5F1ECED9B3004FDA36 /* main.m */; };
@@ -35,6 +37,10 @@
 		5E286DE81ED27D1000C56219 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
 		5E286DE91ED27D1000C56219 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
 		5E286DEB1ED2822200C56219 /* HomePage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomePage.plist; sourceTree = "<group>"; };
+		5E3AF85B1ED2C3DE001000A0 /* AFNHttpTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNHttpTools.h; sourceTree = "<group>"; };
+		5E3AF85C1ED2C3DE001000A0 /* AFNHttpTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNHttpTools.m; sourceTree = "<group>"; };
+		5E3AF85E1ED2CFE2001000A0 /* LOHomeItemDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeItemDetailModel.h; sourceTree = "<group>"; };
+		5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeItemDetailModel.m; sourceTree = "<group>"; };
 		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
 		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
 		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
@@ -92,6 +98,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5E3AF85A1ED2C3DE001000A0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5E3AF85B1ED2C3DE001000A0 /* AFNHttpTools.h */,
+				5E3AF85C1ED2C3DE001000A0 /* AFNHttpTools.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		5E76FE521ECED9B3004FDA36 = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +161,7 @@
 		5E76FE761ECEDD4E004FDA36 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				5E3AF85A1ED2C3DE001000A0 /* Tools */,
 				5E76FEA31ECEE8C9004FDA36 /* Category */,
 				5E76FE771ECEDD77004FDA36 /* LOAppDelegate.h */,
 				5E76FE781ECEDD77004FDA36 /* LOAppDelegate.m */,
@@ -181,6 +197,8 @@
 			children = (
 				5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */,
 				5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */,
+				5E3AF85E1ED2CFE2001000A0 /* LOHomeItemDetailModel.h */,
+				5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -494,6 +512,8 @@
 				5E76FE601ECED9B3004FDA36 /* main.m in Sources */,
 				5E76FE791ECEDD77004FDA36 /* LOAppDelegate.m in Sources */,
 				5E76FE881ECEDF7B004FDA36 /* LOTabBarViewController.m in Sources */,
+				5E3AF85D1ED2C3DE001000A0 /* AFNHttpTools.m in Sources */,
+				5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

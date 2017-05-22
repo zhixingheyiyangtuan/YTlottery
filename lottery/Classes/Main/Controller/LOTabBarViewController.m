@@ -124,7 +124,6 @@
     
     self.customTabBar.item = childVc.tabBarItem;
     
-    NSLog(@"===%@",childVc.tabBarItem);
     
 }
 

@@ -32,4 +32,8 @@
 // 7.字体大小
 #define FontWithSize(size)  [UIFont systemFontOfSize:size]
 
+// 8.请求
+#define lotteryRequestHeader          @"http://apicloud.mob.com/lottery/query?key=1cfe8e5baeca0"
+
+
 #endif /* lottery_h */

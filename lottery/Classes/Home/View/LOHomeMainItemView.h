@@ -9,8 +9,17 @@
 
 #import <UIKit/UIKit.h>
 #define  MainItemHeight  SCREEN_WIDTH/4
+@class LOHomeMainModel;
+@protocol LOHomeMainItemViewDelegate <NSObject>
+
+@optional
+-(void)LOHomeMainItemViewDidSelectWith:(LOHomeMainModel *)model;
+
+@end
 
 @interface LOHomeMainItemView : UIView
 @property (nonatomic,strong)NSArray * collectionArr;
+
+@property (nonatomic,weak) id<LOHomeMainItemViewDelegate> delegate;
 
 @end
