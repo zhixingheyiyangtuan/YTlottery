@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		055C45674EC0F4BDDE3FA691 /* libPods-lottery.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECCBDD370DE98AA169B54407 /* libPods-lottery.a */; };
+		5E286DE71ED27B8100C56219 /* ParentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E286DE61ED27B8100C56219 /* ParentViewController.m */; };
+		5E286DEA1ED27D1000C56219 /* UIButton+touch.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E286DE91ED27D1000C56219 /* UIButton+touch.m */; };
+		5E286DEC1ED2822200C56219 /* HomePage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E286DEB1ED2822200C56219 /* HomePage.plist */; };
+		5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */; };
+		5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */; };
 		5E76FE601ECED9B3004FDA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FE5F1ECED9B3004FDA36 /* main.m */; };
 		5E76FE691ECED9B3004FDA36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E76FE671ECED9B3004FDA36 /* Main.storyboard */; };
 		5E76FE6B1ECED9B3004FDA36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E76FE6A1ECED9B3004FDA36 /* Assets.xcassets */; };
@@ -25,6 +30,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E286DE51ED27B8100C56219 /* ParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParentViewController.h; sourceTree = "<group>"; };
+		5E286DE61ED27B8100C56219 /* ParentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParentViewController.m; sourceTree = "<group>"; };
+		5E286DE81ED27D1000C56219 /* UIButton+touch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+touch.h"; sourceTree = "<group>"; };
+		5E286DE91ED27D1000C56219 /* UIButton+touch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+touch.m"; sourceTree = "<group>"; };
+		5E286DEB1ED2822200C56219 /* HomePage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = HomePage.plist; sourceTree = "<group>"; };
+		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
+		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
+		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
+		5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainItemView.m; sourceTree = "<group>"; };
 		5E76FE5B1ECED9B3004FDA36 /* lottery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = lottery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E76FE5F1ECED9B3004FDA36 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ../../main.m; sourceTree = "<group>"; };
 		5E76FE681ECED9B3004FDA36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -138,6 +152,7 @@
 				5E76FE5F1ECED9B3004FDA36 /* main.m */,
 				5E76FEA71ECEEC5D004FDA36 /* LOPrefixHeader.pch */,
 				5E76FEAB1ECEF267004FDA36 /* lottery.h */,
+				5E286DEB1ED2822200C56219 /* HomePage.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -164,6 +179,8 @@
 		5E76FE7C1ECEDEE5004FDA36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */,
+				5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,6 +188,8 @@
 		5E76FE7D1ECEDEE5004FDA36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */,
+				5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +207,8 @@
 		5E76FE7F1ECEDEE5004FDA36 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E286DE51ED27B8100C56219 /* ParentViewController.h */,
+				5E286DE61ED27B8100C56219 /* ParentViewController.m */,
 				5E76FE861ECEDF7B004FDA36 /* LOTabBarViewController.h */,
 				5E76FE871ECEDF7B004FDA36 /* LOTabBarViewController.m */,
 				5E76FEA01ECEE70B004FDA36 /* LONavigationController.h */,
@@ -316,6 +337,8 @@
 		5E76FEA31ECEE8C9004FDA36 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				5E286DE81ED27D1000C56219 /* UIButton+touch.h */,
+				5E286DE91ED27D1000C56219 /* UIButton+touch.m */,
 				5E76FEA81ECEEE57004FDA36 /* UIImage+LO.h */,
 				5E76FEA91ECEEE57004FDA36 /* UIImage+LO.m */,
 			);
@@ -396,6 +419,7 @@
 			files = (
 				5E76FE6E1ECED9B3004FDA36 /* LaunchScreen.storyboard in Resources */,
 				5E76FE6B1ECED9B3004FDA36 /* Assets.xcassets in Resources */,
+				5E286DEC1ED2822200C56219 /* HomePage.plist in Resources */,
 				5E76FE691ECED9B3004FDA36 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,14 +479,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */,
 				5E76FE961ECEE3F9004FDA36 /* LOMessageVC.m in Sources */,
 				5E76FEA21ECEE70B004FDA36 /* LONavigationController.m in Sources */,
+				5E286DE71ED27B8100C56219 /* ParentViewController.m in Sources */,
 				5E76FE931ECEE3DC004FDA36 /* LODiscoverVC.m in Sources */,
 				5E76FE9C1ECEE42B004FDA36 /* LOMeViewController.m in Sources */,
 				5E76FEAA1ECEEE57004FDA36 /* UIImage+LO.m in Sources */,
 				5E76FEAE1ECEF73D004FDA36 /* LOTabBarButton.m in Sources */,
 				5E76FE991ECEE411004FDA36 /* LOHomeVC.m in Sources */,
+				5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */,
 				5E76FE9F1ECEE546004FDA36 /* LOTabBar.m in Sources */,
+				5E286DEA1ED27D1000C56219 /* UIButton+touch.m in Sources */,
 				5E76FE601ECED9B3004FDA36 /* main.m in Sources */,
 				5E76FE791ECEDD77004FDA36 /* LOAppDelegate.m in Sources */,
 				5E76FE881ECEDF7B004FDA36 /* LOTabBarViewController.m in Sources */,

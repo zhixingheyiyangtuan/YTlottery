@@ -24,7 +24,7 @@
         self.titleLabel.font = [UIFont systemFontOfSize:11];
         // 文字颜色
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-        [self setTitleColor:LOColor(234, 103, 7) forState:UIControlStateSelected];
+        [self setTitleColor:LOColor(234, 103, 7 , 1) forState:UIControlStateSelected];
         
         if (!iOS7) { // 非iOS7下,设置按钮选中时的背景
             [self setBackgroundImage:[UIImage imageWithName:@"tabbar_slider"] forState:UIControlStateSelected];
@@ -57,7 +57,21 @@
 }
 
 
+-(void)setItem:(UITabBarItem *)item{
 
+    _item = item;
+    
+    // 设置文字
+    [self setTitle:self.item.title forState:UIControlStateSelected];
+    [self setTitle:self.item.title forState:UIControlStateNormal];
+    
+    // 设置图片
+    [self setImage:self.item.image forState:UIControlStateNormal];
+    [self setImage:self.item.selectedImage forState:UIControlStateSelected];
+
+
+
+}
 
 
 

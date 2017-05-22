@@ -15,7 +15,7 @@
 #import "LOTabBar.h"
 
 
-@interface LOTabBarViewController ()
+@interface LOTabBarViewController ()<LOTabBarDelegate>
 
 @property(nonatomic,weak)LOTabBar *customTabBar;
 @end
@@ -31,6 +31,20 @@
     [self setupAllChildViewControllers];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    // 删除系统自动生成的UITabBarButton
+    for (UIView *child in self.tabBar.subviews) {
+        if ([child isKindOfClass:[UIControl class]]) {
+            [child removeFromSuperview];
+        }
+    }
+}
+
+
+
 /**
  * 初始化tabbar
  */
@@ -39,10 +53,23 @@
     LOTabBar *customTabBar = [[LOTabBar alloc]init];
     customTabBar.frame = self.tabBar.bounds;
     [self.tabBar addSubview:customTabBar];
+    customTabBar.delegate = self;
+    self.customTabBar = customTabBar;
 
 
 
 }
+
+/**
+ *  监听tabbar按钮的改变
+ *  @param from   原来选中的位置
+ *  @param to     最新选中的位置
+ */
+- (void)tabBar:(LOTabBar *)tabBar didSelectedButtonFrom:(int)from to:(int)to
+{
+    self.selectedIndex = to;
+}
+
 
 -(void)setupAllChildViewControllers{
     

@@ -7,9 +7,19 @@
 //
 
 #import <UIKit/UIKit.h>
+@class LOTabBar;
+@protocol LOTabBarDelegate <NSObject>
+
+@optional
+-(void)tabBar:(LOTabBar *)tabBar didSelectButtonFrom:(int)from to:(int)to;
+
+@end
 
 @interface LOTabBar : UIView
 
+
 @property(nonatomic,strong) UITabBarItem *item;
+
+@property(nonatomic,weak) id<LOTabBarDelegate> delegate;
 
 @end

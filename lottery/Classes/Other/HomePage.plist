@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>image</key>
+		<string>shuangseqiu</string>
+		<key>text</key>
+		<string>双色球</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>daletou</string>
+		<key>text</key>
+		<string>大乐透</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>pailiesan</string>
+		<key>text</key>
+		<string>排列三</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>paliewu</string>
+		<key>text</key>
+		<string>排列五</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>7lecai</string>
+		<key>text</key>
+		<string>七乐彩</string>
+	</dict>
+	<dict>
+		<key>image</key>
+		<string>7xingcai</string>
+		<key>text</key>
+		<string>七星彩</string>
+	</dict>
+</array>
+</plist>
