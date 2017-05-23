@@ -37,15 +37,14 @@
 
 @interface LOHomeLotteryDetailModel : NSObject
 
-/** 中奖注数*/
-@property(nonatomic,strong)NSNumber *awardNumber;
-
-/** 每注奖金*/
-@property(nonatomic,strong)NSNumber *awardPrice;
-
 /** 奖项*/
 @property(nonatomic,copy)NSString *awards;
 
+/** 中奖注数*/
+@property(nonatomic,strong)NSString *awardNumber;
+
+/** 每注奖金*/
+@property(nonatomic,strong)NSString *awardPrice;
 
 @end
 

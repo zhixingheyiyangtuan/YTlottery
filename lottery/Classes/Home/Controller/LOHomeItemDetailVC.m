@@ -10,9 +10,11 @@
 #import "AFNHttpTools.h"
 #import "LOHomeItemDetailModel.h"
 #import "LOHomeDetailTopCell.h"
-@interface LOHomeItemDetailVC ()
+#import "JHGridView.h"
+@interface LOHomeItemDetailVC ()<JHGridViewDelegate>
 
 @property (nonatomic,strong)NSArray *topArray;
+@property (nonatomic,strong)NSArray *bottomArray;
 
 @property (nonatomic,strong)LOHomeItemDetailModel *detailModel;
 
@@ -115,7 +117,7 @@ NSArray *topDataArray = @[@{
 
   self.topArray =  [LOHomeItemDetailTopModel mj_objectArrayWithKeyValuesArray:topDataArray];
     
-
+    self.bottomArray = [LOHomeLotteryDetailModel mj_objectArrayWithKeyValuesArray:self.detailModel.lotteryDetails];
 
 }
 
@@ -142,41 +144,25 @@ NSArray *topDataArray = @[@{
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 
-    return 2;
+    return 1;
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (section == 0) {
-        return self.topArray.count;
-    }else{
-    
-        return 6;
-    
-    }
-
+    return self.topArray.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-    if (indexPath.section == 0) {
-        
-        LOHomeItemDetailTopModel *topModel = self.topArray[indexPath.row];
-        LOHomeDetailTopCell *cell = [LOHomeDetailTopCell LOCell:tableView];
-        if (indexPath.row%2 == 0) {
-              cell.contentView.backgroundColor = LOColor(240, 240, 240, 1);
-        }
-         cell.topModel = topModel;
-        
-        return cell;
-   
-    }else{
-
-        LOHomeDetailTopCell *cell = [LOHomeDetailTopCell LOCell:tableView];
-        return cell;
-    }
     
-
+    LOHomeItemDetailTopModel *topModel = self.topArray[indexPath.row];
+    LOHomeDetailTopCell *cell = [LOHomeDetailTopCell LOCell:tableView];
+    if (indexPath.row%2 == 0) {
+        cell.contentView.backgroundColor = LOColor(240, 240, 240, 1);
+    }
+    cell.topModel = topModel;
+    
+    return cell;
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -194,34 +180,45 @@ NSArray *topDataArray = @[@{
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-
-    if (section == 0) {
-        UILabel *topLabel = [[UILabel alloc]init];
-        if (self.detailModel.period) {
-              topLabel.text = [NSString stringWithFormat:@"    第%@期",self.detailModel.period];
-        }
-      
-        topLabel.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44 *autoSizeScaleY);
-        topLabel.font = FontWithSize(20);
-        return topLabel;
-        
+    UILabel *topLabel = [[UILabel alloc]init];
+    if (self.detailModel.period) {
+        topLabel.text = [NSString stringWithFormat:@"    第%@期",self.detailModel.period];
     }
-
-
-    return nil;
-
+    
+    topLabel.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44 *autoSizeScaleY);
+    topLabel.font = FontWithSize(20);
+    return topLabel;
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 44 *autoSizeScaleY;
+}
 
-    if (section == 0) {
-        return 44 *autoSizeScaleY;
-    }else{
+-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    [super viewDidLoad];
     
-     return 0.01 *autoSizeScaleY;
+    if (self.bottomArray.count > 0) {
+   
+    JHGridView *gridView = [[JHGridView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 300)];
+    gridView.delegate = self;
+   
+
+    [gridView setTitles:@[@"奖项",
+                          @"中奖注数",
+                          @"每注奖金",
+                          ]
+             andObjects:self.bottomArray withTags:@[@"awards",@"awardNumber",@"awardPrice"]];
+    return gridView;
         
     }
-    
+    return nil;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+
+    return 200;
+
 }
 
 @end
