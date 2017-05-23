@@ -11,7 +11,8 @@
 @protocol LOTabBarDelegate <NSObject>
 
 @optional
--(void)tabBar:(LOTabBar *)tabBar didSelectButtonFrom:(int)from to:(int)to;
+-(void)tabBar:(LOTabBar *)tabBar didSelectButtonFrom:(long)from to:(long)to;
+
 
 @end
 

@@ -18,13 +18,13 @@
 		<key>image</key>
 		<string>pailiesan</string>
 		<key>text</key>
-		<string>排列三</string>
+		<string>排列3</string>
 	</dict>
 	<dict>
 		<key>image</key>
 		<string>paliewu</string>
 		<key>text</key>
-		<string>排列五</string>
+		<string>排列5</string>
 	</dict>
 	<dict>
 		<key>image</key>

@@ -49,4 +49,18 @@
 
 @end
 
+@interface LOHomeItemDetailTopModel : NSObject
+
+
+/** 图片*/
+@property(nonatomic,copy)NSString *itemImage;
+
+/** 标题*/
+@property(nonatomic,copy)NSString *itemName;
+
+/** 内容*/
+@property(nonatomic,copy)NSString *itemContent;
+
+@end
+
 

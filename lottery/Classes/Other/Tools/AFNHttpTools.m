@@ -40,11 +40,15 @@
 //    
 //    NSString * newUrl = [NEW_URL_BASE stringByAppendingString:escapedUrl];
     //NSLog(@"get请求url为 = %@",escapedUrl);
-        NSMutableDictionary * paramDic = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    
+    NSLog(@"上送url=%@",url);
+    NSMutableDictionary * paramDic = [NSMutableDictionary dictionaryWithDictionary:parameters];
+    NSLog(@"上送参数=%@",parameters);
     [manager GET:url parameters:paramDic progress:^(NSProgress * _Nonnull downloadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
        successed(responseObject);
+    NSLog(@"返回参数=%@",responseObject);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         failed(error);
     }];

@@ -31,6 +31,7 @@
 		5E76FEA21ECEE70B004FDA36 /* LONavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FEA11ECEE70B004FDA36 /* LONavigationController.m */; };
 		5E76FEAA1ECEEE57004FDA36 /* UIImage+LO.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FEA91ECEEE57004FDA36 /* UIImage+LO.m */; };
 		5E76FEAE1ECEF73D004FDA36 /* LOTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FEAD1ECEF73D004FDA36 /* LOTabBarButton.m */; };
+		5EEAB9F21ED41D6700C943BE /* JHGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEAB9F11ED41D6700C943BE /* JHGridView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,6 +80,8 @@
 		5E76FEAB1ECEF267004FDA36 /* lottery.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lottery.h; sourceTree = "<group>"; };
 		5E76FEAC1ECEF73D004FDA36 /* LOTabBarButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOTabBarButton.h; sourceTree = "<group>"; };
 		5E76FEAD1ECEF73D004FDA36 /* LOTabBarButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOTabBarButton.m; sourceTree = "<group>"; };
+		5EEAB9F01ED41D6700C943BE /* JHGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHGridView.h; sourceTree = "<group>"; };
+		5EEAB9F11ED41D6700C943BE /* JHGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHGridView.m; sourceTree = "<group>"; };
 		9DFF2A441D63AB586DA4691A /* Pods-lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.debug.xcconfig"; sourceTree = "<group>"; };
 		BD96FF958511872D7B7E0E4A /* Pods-lottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.release.xcconfig"; sourceTree = "<group>"; };
 		ECCBDD370DE98AA169B54407 /* libPods-lottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +217,8 @@
 		5E76FE7D1ECEDEE5004FDA36 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5EEAB9F01ED41D6700C943BE /* JHGridView.h */,
+				5EEAB9F11ED41D6700C943BE /* JHGridView.m */,
 				5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */,
 				5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */,
 				5E3AF8641ED2E276001000A0 /* LOHomeDetailTopCell.h */,
@@ -513,6 +518,7 @@
 				5E76FEA21ECEE70B004FDA36 /* LONavigationController.m in Sources */,
 				5E286DE71ED27B8100C56219 /* ParentViewController.m in Sources */,
 				5E76FE931ECEE3DC004FDA36 /* LODiscoverVC.m in Sources */,
+				5EEAB9F21ED41D6700C943BE /* JHGridView.m in Sources */,
 				5E76FE9C1ECEE42B004FDA36 /* LOMeViewController.m in Sources */,
 				5E76FEAA1ECEEE57004FDA36 /* UIImage+LO.m in Sources */,
 				5E76FEAE1ECEF73D004FDA36 /* LOTabBarButton.m in Sources */,

@@ -66,12 +66,12 @@
 
 
 -(void)buttonClick:(LOTabBarButton *)button{
+    
    // 1.通知代理
     if (_delegate && [_delegate respondsToSelector:@selector(tabBar:didSelectButtonFrom:to:)]) {
         [_delegate tabBar:self didSelectButtonFrom:self.selectedButton.tag to:button.tag];
     }
     
-    //2.设置按钮的状态
     // 2.设置按钮的状态
     self.selectedButton.selected = NO;
     button.selected = YES;

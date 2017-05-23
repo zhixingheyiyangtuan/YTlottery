@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LOHomeItemDetailModel.h"
 @interface LOHomeDetailTopCell : UITableViewCell
+
+@property(nonatomic,strong) LOHomeItemDetailTopModel *topModel;
+
+
 
 /**快速取cell */
 +(instancetype)LOCell:(UITableView *)tableView;

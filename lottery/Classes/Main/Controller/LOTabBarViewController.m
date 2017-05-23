@@ -65,8 +65,9 @@
  *  @param from   原来选中的位置
  *  @param to     最新选中的位置
  */
-- (void)tabBar:(LOTabBar *)tabBar didSelectedButtonFrom:(int)from to:(int)to
-{
+
+-(void)tabBar:(LOTabBar *)tabBar didSelectButtonFrom:(long)from to:(long)to{
+
     self.selectedIndex = to;
 }
 

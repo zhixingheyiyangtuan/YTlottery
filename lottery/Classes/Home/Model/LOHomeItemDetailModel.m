@@ -18,3 +18,10 @@
 
 
 @end
+
+
+@implementation LOHomeItemDetailTopModel
+
+
+
+@end

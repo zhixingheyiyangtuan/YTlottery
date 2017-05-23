@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParentViewController.h"
 
-@interface LOHomeVC : UIViewController
+@interface LOHomeVC : ParentViewController
 
 @end

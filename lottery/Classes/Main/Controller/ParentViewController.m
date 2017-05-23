@@ -80,30 +80,6 @@
 
 
 
--(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
-        [cell setSeparatorInset:UIEdgeInsetsZero];
-    }
-    
-    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
-        [cell setLayoutMargins:UIEdgeInsetsZero];
-    }
-}
-
--(void)viewDidLayoutSubviews
-{
-    if ([self.meTableView respondsToSelector:@selector(setSeparatorInset:)]) {
-        [self.meTableView setSeparatorInset:UIEdgeInsetsMake(0,0,0,0)];
-    }
-    
-    if ([self.meTableView respondsToSelector:@selector(setLayoutMargins:)]) {
-        [self.meTableView setLayoutMargins:UIEdgeInsetsMake(0,0,0,0)];
-    }
-}
-
-
-
 
 
 
@@ -144,7 +120,7 @@
         self.navigationItem.rightBarButtonItem = rightItem;
     }
     
-    [self changeStatusBarBgColor];
+    
 }
 
 
@@ -186,7 +162,7 @@
         self.navigationItem.rightBarButtonItem = rightItem;
     }
     
-    [self changeStatusBarBgColor];
+   
 }
 
 
@@ -277,13 +253,6 @@
     
 }
 
--(void)changeStatusBarBgColor{
-    //设置statusbar颜色
-    UIView * statusBgView = [[UIView alloc]initWithFrame:CGRectMake(0.0, -20.0, SCREEN_WIDTH, 20)];
-    [statusBgView setBackgroundColor:LOColor(66, 98, 126, 1)];
-    [self.navigationController.navigationBar addSubview:statusBgView];
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-}
 
 -(void)setNavigationBarTittle:(NSString*)barTitle{
     UILabel * naviTitle = [[UILabel alloc]initWithFrame:CGRectMake(0.0, 0.0, 20*barTitle.length, 44.0)];
