@@ -106,10 +106,6 @@
     self.contentLabel.text = topModel.itemContent;
 
     
-    
-
-
-
 
 }
 

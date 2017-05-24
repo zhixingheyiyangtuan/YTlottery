@@ -10,8 +10,10 @@
 #import "AFNHttpTools.h"
 #import "LOHomeItemDetailModel.h"
 #import "LOHomeDetailTopCell.h"
-#import "JHGridView.h"
-@interface LOHomeItemDetailVC ()<JHGridViewDelegate>
+#import "LOHomeDetailBottomView.h"
+#import "LOHomeDetailBottomCell.h"
+
+@interface LOHomeItemDetailVC ()
 
 @property (nonatomic,strong)NSArray *topArray;
 @property (nonatomic,strong)NSArray *bottomArray;
@@ -53,16 +55,18 @@
              [self createData];
             [self.meTableView reloadData];
     
-        }
+        }else{
+          [self hideLoadingView];
+            
+         [self showErrorMessage:@"加载数据失败"];
+      }
     
-        
-        
     } failed:^(NSError *err) {
+        [self hideLoadingView];
+         [self showErrorMessage:@"加载数据失败"];
         
     }];
     
-
-
 }
 
 
@@ -144,24 +148,42 @@ NSArray *topDataArray = @[@{
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
 
-    return 1;
+    return 2;
     
 }
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.topArray.count;
+    
+    if (section == 0) {
+         return self.topArray.count;
+    }else{
+    
+        return self.bottomArray.count;
+    }
+   
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    LOHomeItemDetailTopModel *topModel = self.topArray[indexPath.row];
-    LOHomeDetailTopCell *cell = [LOHomeDetailTopCell LOCell:tableView];
-    if (indexPath.row%2 == 0) {
-        cell.contentView.backgroundColor = LOColor(240, 240, 240, 1);
-    }
-    cell.topModel = topModel;
+    if (indexPath.section == 0) {
+        LOHomeItemDetailTopModel *topModel = self.topArray[indexPath.row];
+        LOHomeDetailTopCell *cell = [LOHomeDetailTopCell LOCell:tableView];
+        if (indexPath.row%2 != 0) {
+            cell.contentView.backgroundColor = BACKGROUNDCOLOR;
+        }
+        cell.topModel = topModel;
+        
+        return cell;
+    }else{
     
-    return cell;
+        LOHomeLotteryDetailModel *bottomModel = self.bottomArray[indexPath.row];
+        LOHomeDetailBottomCell *cell = [LOHomeDetailBottomCell LOCell:tableView];
+        cell.index = indexPath;
+        cell.bottomModel = bottomModel;
+        return cell;
+    
+    }
+    
     
 }
 
@@ -180,44 +202,51 @@ NSArray *topDataArray = @[@{
 }
 
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    UILabel *topLabel = [[UILabel alloc]init];
-    if (self.detailModel.period) {
-        topLabel.text = [NSString stringWithFormat:@"    第%@期",self.detailModel.period];
+    if (section == 0) {
+        UILabel *topLabel = [[UILabel alloc]init];
+        if (self.detailModel.period) {
+            topLabel.text = [NSString stringWithFormat:@"    第%@期",self.detailModel.period];
+        }
+        
+        topLabel.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44 *autoSizeScaleY);
+        topLabel.font = FontWithSize(20);
+        return topLabel;
+    }else{
+        if (self.detailModel.lotteryDetails.count > 0) {
+            LOHomeDetailBottomView * bottomView = [[LOHomeDetailBottomView alloc]init];
+            bottomView.frame = CGRectMake(0, 0, SCREEN_WIDTH, VIEWHEIGHT);
+            return bottomView;
+        }else{
+        
+            return nil;
+        
+        }
+        
+
     }
     
-    topLabel.frame = CGRectMake(0, 0, SCREEN_WIDTH, 44 *autoSizeScaleY);
-    topLabel.font = FontWithSize(20);
-    return topLabel;
     
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 44 *autoSizeScaleY;
-}
-
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    [super viewDidLoad];
     
-    if (self.bottomArray.count > 0) {
-   
-    JHGridView *gridView = [[JHGridView alloc] initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 300)];
-    gridView.delegate = self;
-   
-
-    [gridView setTitles:@[@"奖项",
-                          @"中奖注数",
-                          @"每注奖金",
-                          ]
-             andObjects:self.bottomArray withTags:@[@"awards",@"awardNumber",@"awardPrice"]];
-    return gridView;
-        
+    if (section == 0) {
+         return 44 *autoSizeScaleY;
+    }else{
+       return 60 *autoSizeScaleY;
     }
-    return nil;
+   
 }
 
+//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+//  
+//  
+//    return nil;
+//}
+//
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
 
-    return 200;
+    return 0.001 *autoSizeScaleY;;
 
 }
 

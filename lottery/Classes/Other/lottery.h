@@ -17,6 +17,8 @@
 #define LOColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
 #define SYSTEMCOLOR LOColor(248, 121, 34, 1)
+#define BACKGROUNDCOLOR LOColor(240, 240, 240, 1)
+
 
 // 3.屏幕大小适配
 #define autoSizeScaleX  (SCREEN_WIDTH>320?SCREEN_WIDTH/320:1)
