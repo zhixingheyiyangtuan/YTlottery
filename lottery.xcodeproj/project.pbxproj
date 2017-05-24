@@ -33,6 +33,8 @@
 		5E76FEAE1ECEF73D004FDA36 /* LOTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FEAD1ECEF73D004FDA36 /* LOTabBarButton.m */; };
 		5EEF44791ED53477009EBD03 /* LOHomeDetailBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF44781ED53477009EBD03 /* LOHomeDetailBottomView.m */; };
 		5EEF447C1ED53D56009EBD03 /* LOHomeDetailBottomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF447B1ED53D56009EBD03 /* LOHomeDetailBottomCell.m */; };
+		5EEF447E1ED566B3009EBD03 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EEF447D1ED566B3009EBD03 /* Images.xcassets */; };
+		5EEF44811ED57E79009EBD03 /* LOHomeDetailSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEF44801ED57E79009EBD03 /* LOHomeDetailSelectView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +87,9 @@
 		5EEF44781ED53477009EBD03 /* LOHomeDetailBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailBottomView.m; sourceTree = "<group>"; };
 		5EEF447A1ED53D56009EBD03 /* LOHomeDetailBottomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeDetailBottomCell.h; sourceTree = "<group>"; };
 		5EEF447B1ED53D56009EBD03 /* LOHomeDetailBottomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailBottomCell.m; sourceTree = "<group>"; };
+		5EEF447D1ED566B3009EBD03 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5EEF447F1ED57E79009EBD03 /* LOHomeDetailSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeDetailSelectView.h; sourceTree = "<group>"; };
+		5EEF44801ED57E79009EBD03 /* LOHomeDetailSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailSelectView.m; sourceTree = "<group>"; };
 		9DFF2A441D63AB586DA4691A /* Pods-lottery.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.debug.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.debug.xcconfig"; sourceTree = "<group>"; };
 		BD96FF958511872D7B7E0E4A /* Pods-lottery.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-lottery.release.xcconfig"; path = "Pods/Target Support Files/Pods-lottery/Pods-lottery.release.xcconfig"; sourceTree = "<group>"; };
 		ECCBDD370DE98AA169B54407 /* libPods-lottery.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-lottery.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +150,7 @@
 				5E76FE6A1ECED9B3004FDA36 /* Assets.xcassets */,
 				5E76FE6C1ECED9B3004FDA36 /* LaunchScreen.storyboard */,
 				5E76FE6F1ECED9B3004FDA36 /* Info.plist */,
+				5EEF447D1ED566B3009EBD03 /* Images.xcassets */,
 				5E76FE5E1ECED9B3004FDA36 /* Supporting Files */,
 			);
 			path = lottery;
@@ -228,6 +234,8 @@
 				5EEF44781ED53477009EBD03 /* LOHomeDetailBottomView.m */,
 				5EEF447A1ED53D56009EBD03 /* LOHomeDetailBottomCell.h */,
 				5EEF447B1ED53D56009EBD03 /* LOHomeDetailBottomCell.m */,
+				5EEF447F1ED57E79009EBD03 /* LOHomeDetailSelectView.h */,
+				5EEF44801ED57E79009EBD03 /* LOHomeDetailSelectView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -456,6 +464,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E76FE6E1ECED9B3004FDA36 /* LaunchScreen.storyboard in Resources */,
+				5EEF447E1ED566B3009EBD03 /* Images.xcassets in Resources */,
 				5E76FE6B1ECED9B3004FDA36 /* Assets.xcassets in Resources */,
 				5E286DEC1ED2822200C56219 /* HomePage.plist in Resources */,
 				5E76FE691ECED9B3004FDA36 /* Main.storyboard in Resources */,
@@ -518,6 +527,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E3AF8631ED2D745001000A0 /* LOHomeItemDetailVC.m in Sources */,
+				5EEF44811ED57E79009EBD03 /* LOHomeDetailSelectView.m in Sources */,
 				5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */,
 				5EEF44791ED53477009EBD03 /* LOHomeDetailBottomView.m in Sources */,
 				5E76FE961ECEE3F9004FDA36 /* LOMessageVC.m in Sources */,
@@ -658,6 +668,8 @@
 			baseConfigurationReference = 9DFF2A441D63AB586DA4691A /* Pods-lottery.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 876UH3YYVA;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -667,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = createa.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -675,6 +688,8 @@
 			baseConfigurationReference = BD96FF958511872D7B7E0E4A /* Pods-lottery.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 876UH3YYVA;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -684,6 +699,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = createa.lottery;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

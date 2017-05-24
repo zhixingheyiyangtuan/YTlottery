@@ -12,39 +12,33 @@
 #import "LOHomeDetailTopCell.h"
 #import "LOHomeDetailBottomView.h"
 #import "LOHomeDetailBottomCell.h"
+#import "LOHomeDetailSelectView.h"
 
-@interface LOHomeItemDetailVC ()
-
+@interface LOHomeItemDetailVC ()<LOHomeDetailSelectViewDelegate>
 @property (nonatomic,strong)NSArray *topArray;
 @property (nonatomic,strong)NSArray *bottomArray;
 
 @property (nonatomic,strong)LOHomeItemDetailModel *detailModel;
-
-
+@property (nonatomic,copy)NSString *period;
 
 @end
 
 @implementation LOHomeItemDetailVC
 
+
 -(void)viewWillAppear:(BOOL)animated{
 
     [super viewWillAppear:animated];
-    
-    
-     [self  requestToServer];
-
-
+    [self  requestToServer];
 }
 
 -(void)requestToServer{
 
     NSDictionary * paramDic = [NSDictionary dictionary];
     
-    //      paramDic = @{@"period":@"2017056",
-    //                   @"name":@"双色球"};
-    paramDic = @{
-                 @"name":self.mainModel.text};
-    
+    paramDic = @{@"period":self.period != nil ? self.period :@"",
+                       @"name":self.mainModel.text};
+   
     [AFNHttpTools getDataWithUrl:lotteryRequestHeader andParameters:paramDic successed:^(NSDictionary *dict) {
         //        NSLog(@"%@",dict);
         if ([dict[@"retCode"] isEqualToString:@"200"]) {
@@ -58,7 +52,7 @@
         }else{
           [self hideLoadingView];
             
-         [self showErrorMessage:@"加载数据失败"];
+         [self showErrorMessage:dict[@"msg"]];
       }
     
     } failed:^(NSError *err) {
@@ -75,11 +69,7 @@
    [super viewDidLoad];
     [self showLoadingViewWithMessage:@"正在加载中。。"];
     [self setNavigationBarTittle:self.mainModel.text];
-    
     [self setNavigationBarWithLeftBarItemImage:@"nav_fanhui" rightBarIteImage:nil];
-    
-    
-    
     [self createUI];
 }
 
@@ -126,15 +116,20 @@ NSArray *topDataArray = @[@{
 }
 
 -(void)createUI{
-  
+   
     self.meTableView.separatorStyle = NO;
     [self.view addSubview:self.meTableView];
     [self.meTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(self.view.mas_top).offset(0);
         make.left.equalTo(self.view.mas_left).offset(0);
         make.right.equalTo(self.view.mas_right).offset(0);
-        make.bottom.equalTo(self.view.mas_bottom).offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-BUTTONHEIGHT);
     }];
+  
+    LOHomeDetailSelectView *selectView = [[LOHomeDetailSelectView alloc]init];
+    selectView.frame = CGRectMake(0, SCREEN_HEIGHT - BUTTONHEIGHT, SCREEN_WIDTH, BUTTONHEIGHT);
+    selectView.delegate = self;
+    [self.view addSubview:selectView];
 
 }
 
@@ -143,6 +138,21 @@ NSArray *topDataArray = @[@{
     
 }
 
+#pragma mark - LOHomeDetailSelectViewDelegate
+
+-(void)LOHomeDetailSelectViewButtonCilckWithButton:(UIButton *)button{
+
+    if (button.tag == PreviousTag) {
+       self.period = [NSString stringWithFormat:@"%ld",[self.detailModel.period integerValue] -1];
+    }
+    
+    if (button.tag == NextTag) {
+        self.period = [NSString stringWithFormat:@"%ld",[self.detailModel.period integerValue] + 1];
+    }
+     [self showLoadingViewWithMessage:@"正在加载中。。"];
+     [self  requestToServer];
+
+}
 
 #pragma -mark UITableViewDelegate,UITableViewDataSource
 
@@ -222,9 +232,7 @@ NSArray *topDataArray = @[@{
         
         }
         
-
     }
-    
     
 }
 
@@ -238,12 +246,6 @@ NSArray *topDataArray = @[@{
    
 }
 
-//-(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-//  
-//  
-//    return nil;
-//}
-//
 -(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
 
     return 0.001 *autoSizeScaleY;;

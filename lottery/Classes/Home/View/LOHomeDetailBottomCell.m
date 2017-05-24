@@ -14,6 +14,8 @@
 #define VIEWHEIGHT 40 *autoSizeScaleY
 #define VIEWTOP 2 *autoSizeScaleY
 
+#define CELLNAMEFONT FontWithSize(15)
+
 @interface LOHomeDetailBottomCell()
 
 @property(nonatomic,strong)UILabel *awardsLabel;
@@ -68,7 +70,7 @@
     label.layer.borderWidth = 0.5;
     label.layer.borderColor = [SYSTEMCOLOR CGColor];
     label.layer.cornerRadius = 3.0;
-    
+    label.font = CELLNAMEFONT;
     label.textAlignment = NSTextAlignmentCenter;
     [self addSubview:label];
     

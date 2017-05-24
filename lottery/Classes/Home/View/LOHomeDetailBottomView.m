@@ -44,7 +44,7 @@
     UILabel *label = [[UILabel alloc]init];
     label.text = title;
     label.textAlignment = NSTextAlignmentCenter;
-    label.backgroundColor = [UIColor lightGrayColor];
+    label.backgroundColor = BACKGROUNDCOLOR;
     [self addSubview:label];
     
     return label;

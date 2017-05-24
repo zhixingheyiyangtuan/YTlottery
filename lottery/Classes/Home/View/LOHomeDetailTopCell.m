@@ -10,7 +10,7 @@
 
 #define CELLTOP 10 *autoSizeScaleY
 #define CELLBORDER 10 *autoSizeScaleX
-#define CELLNAMEFONT FontWithSize(16)
+#define CELLNAMEFONT FontWithSize(15)
 
 
 @interface LOHomeDetailTopCell()
