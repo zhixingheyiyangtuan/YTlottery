@@ -88,7 +88,7 @@
     [self setupChildViewController:discoverVC title:@"诗词" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     
     // 4.我
-    LOMessageVC *meVC = [[LOMessageVC alloc] init];
+    LOMeViewController *meVC = [[LOMeViewController alloc] init];
     [self setupChildViewController:meVC title:@"我" imageName:@"tabbar_profile" selectedImageName:@"tabbar_profile_selected"];
 
 

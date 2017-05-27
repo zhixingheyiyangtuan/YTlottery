@@ -21,6 +21,8 @@
 		5E3F19861ED92B340044079A /* LODBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F19851ED92B340044079A /* LODBManager.m */; };
 		5E3F19891ED955D20044079A /* LOPoetryListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F19881ED955D20044079A /* LOPoetryListVC.m */; };
 		5E3F198C1ED9613A0044079A /* LOPoetryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F198B1ED9613A0044079A /* LOPoetryDetailVC.m */; };
+		5E3F198E1ED97BB30044079A /* LotteryList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E3F198D1ED97BB30044079A /* LotteryList.plist */; };
+		5E3F19911ED97C670044079A /* LOListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F19901ED97C670044079A /* LOListModel.m */; };
 		5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */; };
 		5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */; };
 		5E76FE601ECED9B3004FDA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FE5F1ECED9B3004FDA36 /* main.m */; };
@@ -69,6 +71,9 @@
 		5E3F19881ED955D20044079A /* LOPoetryListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetryListVC.m; sourceTree = "<group>"; };
 		5E3F198A1ED9613A0044079A /* LOPoetryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPoetryDetailVC.h; sourceTree = "<group>"; };
 		5E3F198B1ED9613A0044079A /* LOPoetryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetryDetailVC.m; sourceTree = "<group>"; };
+		5E3F198D1ED97BB30044079A /* LotteryList.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LotteryList.plist; sourceTree = "<group>"; };
+		5E3F198F1ED97C670044079A /* LOListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOListModel.h; sourceTree = "<group>"; };
+		5E3F19901ED97C670044079A /* LOListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOListModel.m; sourceTree = "<group>"; };
 		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
 		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
 		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
@@ -224,6 +229,7 @@
 				5E76FEA71ECEEC5D004FDA36 /* LOPrefixHeader.pch */,
 				5E76FEAB1ECEF267004FDA36 /* lottery.h */,
 				5E286DEB1ED2822200C56219 /* HomePage.plist */,
+				5E3F198D1ED97BB30044079A /* LotteryList.plist */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -415,6 +421,8 @@
 		5E76FE8F1ECEE312004FDA36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F198F1ED97C670044079A /* LOListModel.h */,
+				5E3F19901ED97C670044079A /* LOListModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -514,6 +522,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3F198E1ED97BB30044079A /* LotteryList.plist in Resources */,
 				5E3F19821ED92AF90044079A /* Poetry.bundle in Resources */,
 				5E76FE6E1ECED9B3004FDA36 /* LaunchScreen.storyboard in Resources */,
 				5EEF447E1ED566B3009EBD03 /* Images.xcassets in Resources */,
@@ -602,6 +611,7 @@
 				5E76FE601ECED9B3004FDA36 /* main.m in Sources */,
 				5E76FE791ECEDD77004FDA36 /* LOAppDelegate.m in Sources */,
 				5E3F198C1ED9613A0044079A /* LOPoetryDetailVC.m in Sources */,
+				5E3F19911ED97C670044079A /* LOListModel.m in Sources */,
 				5E76FE881ECEDF7B004FDA36 /* LOTabBarViewController.m in Sources */,
 				5E3AF85D1ED2C3DE001000A0 /* AFNHttpTools.m in Sources */,
 				5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */,

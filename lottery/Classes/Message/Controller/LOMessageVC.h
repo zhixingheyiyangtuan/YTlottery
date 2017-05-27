@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParentViewController.h"
 
-@interface LOMessageVC : UIViewController
+@interface LOMessageVC : ParentViewController
 
 @end
