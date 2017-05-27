@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FMDB.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,17 +47,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>024EBCF450A3198DDE12D6E673B2BCE9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>19261EAB4206AC6FF1110E12C94BAC6A</key>
+		<key>306B0E7110710B92D8D683806B98657C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7561FED284C4BC61EE4BE4A43C81BAE6</key>
+		<key>8553071B161B15A84C94C0F811EAD930</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8642CC820CE8C5B88C113D7F47AF4BC3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -68,11 +83,6 @@
 			<true/>
 		</dict>
 		<key>A316B54C67E947D23CECD230FA5BFAEF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D4A2F942C26B24D9ECC04CDCC9ADDCE0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

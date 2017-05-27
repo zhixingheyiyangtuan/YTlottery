@@ -85,7 +85,7 @@
     
     // 3.广场
     LODiscoverVC *discoverVC = [[LODiscoverVC alloc] init];
-    [self setupChildViewController:discoverVC title:@"广场" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
+    [self setupChildViewController:discoverVC title:@"诗词" imageName:@"tabbar_discover" selectedImageName:@"tabbar_discover_selected"];
     
     // 4.我
     LOMessageVC *meVC = [[LOMessageVC alloc] init];

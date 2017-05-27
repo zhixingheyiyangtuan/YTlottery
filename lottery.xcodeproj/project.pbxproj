@@ -15,6 +15,12 @@
 		5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF85F1ED2CFE2001000A0 /* LOHomeItemDetailModel.m */; };
 		5E3AF8631ED2D745001000A0 /* LOHomeItemDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF8621ED2D745001000A0 /* LOHomeItemDetailVC.m */; };
 		5E3AF8661ED2E276001000A0 /* LOHomeDetailTopCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */; };
+		5E3F197C1ED928640044079A /* LOPoetryKind.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F197B1ED928640044079A /* LOPoetryKind.m */; };
+		5E3F197F1ED928830044079A /* LOPoetry.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F197E1ED928830044079A /* LOPoetry.m */; };
+		5E3F19821ED92AF90044079A /* Poetry.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5E3F19811ED92AF90044079A /* Poetry.bundle */; };
+		5E3F19861ED92B340044079A /* LODBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F19851ED92B340044079A /* LODBManager.m */; };
+		5E3F19891ED955D20044079A /* LOPoetryListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F19881ED955D20044079A /* LOPoetryListVC.m */; };
+		5E3F198C1ED9613A0044079A /* LOPoetryDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E3F198B1ED9613A0044079A /* LOPoetryDetailVC.m */; };
 		5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */; };
 		5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E4AD7421ED2ADB900AE5980 /* LOHomeMainItemView.m */; };
 		5E76FE601ECED9B3004FDA36 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E76FE5F1ECED9B3004FDA36 /* main.m */; };
@@ -52,6 +58,17 @@
 		5E3AF8641ED2E276001000A0 /* LOHomeDetailTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeDetailTopCell.h; sourceTree = "<group>"; };
 		5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailTopCell.m; sourceTree = "<group>"; };
 		5E3F19791ED916060044079A /* lottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lottery.entitlements; sourceTree = "<group>"; };
+		5E3F197A1ED928640044079A /* LOPoetryKind.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPoetryKind.h; sourceTree = "<group>"; };
+		5E3F197B1ED928640044079A /* LOPoetryKind.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetryKind.m; sourceTree = "<group>"; };
+		5E3F197D1ED928830044079A /* LOPoetry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPoetry.h; sourceTree = "<group>"; };
+		5E3F197E1ED928830044079A /* LOPoetry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetry.m; sourceTree = "<group>"; };
+		5E3F19811ED92AF90044079A /* Poetry.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Poetry.bundle; sourceTree = "<group>"; };
+		5E3F19841ED92B340044079A /* LODBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LODBManager.h; sourceTree = "<group>"; };
+		5E3F19851ED92B340044079A /* LODBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LODBManager.m; sourceTree = "<group>"; };
+		5E3F19871ED955D20044079A /* LOPoetryListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPoetryListVC.h; sourceTree = "<group>"; };
+		5E3F19881ED955D20044079A /* LOPoetryListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetryListVC.m; sourceTree = "<group>"; };
+		5E3F198A1ED9613A0044079A /* LOPoetryDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOPoetryDetailVC.h; sourceTree = "<group>"; };
+		5E3F198B1ED9613A0044079A /* LOPoetryDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOPoetryDetailVC.m; sourceTree = "<group>"; };
 		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
 		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
 		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
@@ -125,6 +142,23 @@
 			path = Tools;
 			sourceTree = "<group>";
 		};
+		5E3F19801ED92AD40044079A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5E3F19811ED92AF90044079A /* Poetry.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5E3F19831ED92B1B0044079A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				5E3F19841ED92B340044079A /* LODBManager.h */,
+				5E3F19851ED92B340044079A /* LODBManager.m */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
 		5E76FE521ECED9B3004FDA36 = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +208,7 @@
 				5E76FE7E1ECEDEE5004FDA36 /* Main */,
 				5E76FE821ECEDEE5004FDA36 /* Me */,
 				5E76FE761ECEDD4E004FDA36 /* Other */,
+				5E3F19801ED92AD40044079A /* Resources */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -319,6 +354,7 @@
 		5E76FE891ECEE312004FDA36 /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F19831ED92B1B0044079A /* Tools */,
 				5E76FE8A1ECEE312004FDA36 /* Controller */,
 				5E76FE8B1ECEE312004FDA36 /* Model */,
 				5E76FE8C1ECEE312004FDA36 /* View */,
@@ -331,6 +367,10 @@
 			children = (
 				5E76FE911ECEE3DC004FDA36 /* LODiscoverVC.h */,
 				5E76FE921ECEE3DC004FDA36 /* LODiscoverVC.m */,
+				5E3F19871ED955D20044079A /* LOPoetryListVC.h */,
+				5E3F19881ED955D20044079A /* LOPoetryListVC.m */,
+				5E3F198A1ED9613A0044079A /* LOPoetryDetailVC.h */,
+				5E3F198B1ED9613A0044079A /* LOPoetryDetailVC.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -338,6 +378,10 @@
 		5E76FE8B1ECEE312004FDA36 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F197A1ED928640044079A /* LOPoetryKind.h */,
+				5E3F197B1ED928640044079A /* LOPoetryKind.m */,
+				5E3F197D1ED928830044079A /* LOPoetry.h */,
+				5E3F197E1ED928830044079A /* LOPoetry.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -470,6 +514,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3F19821ED92AF90044079A /* Poetry.bundle in Resources */,
 				5E76FE6E1ECED9B3004FDA36 /* LaunchScreen.storyboard in Resources */,
 				5EEF447E1ED566B3009EBD03 /* Images.xcassets in Resources */,
 				5E76FE6B1ECED9B3004FDA36 /* Assets.xcassets in Resources */,
@@ -533,12 +578,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E3F19891ED955D20044079A /* LOPoetryListVC.m in Sources */,
 				5E3AF8631ED2D745001000A0 /* LOHomeItemDetailVC.m in Sources */,
 				5EEF44811ED57E79009EBD03 /* LOHomeDetailSelectView.m in Sources */,
 				5E4AD7401ED2AD8A00AE5980 /* LOHomeMainModel.m in Sources */,
+				5E3F197F1ED928830044079A /* LOPoetry.m in Sources */,
 				5EEF44791ED53477009EBD03 /* LOHomeDetailBottomView.m in Sources */,
 				5E76FE961ECEE3F9004FDA36 /* LOMessageVC.m in Sources */,
 				5E76FEA21ECEE70B004FDA36 /* LONavigationController.m in Sources */,
+				5E3F19861ED92B340044079A /* LODBManager.m in Sources */,
 				5E286DE71ED27B8100C56219 /* ParentViewController.m in Sources */,
 				5EEF447C1ED53D56009EBD03 /* LOHomeDetailBottomCell.m in Sources */,
 				5E76FE931ECEE3DC004FDA36 /* LODiscoverVC.m in Sources */,
@@ -550,8 +598,10 @@
 				5E4AD7431ED2ADB900AE5980 /* LOHomeMainItemView.m in Sources */,
 				5E76FE9F1ECEE546004FDA36 /* LOTabBar.m in Sources */,
 				5E286DEA1ED27D1000C56219 /* UIButton+touch.m in Sources */,
+				5E3F197C1ED928640044079A /* LOPoetryKind.m in Sources */,
 				5E76FE601ECED9B3004FDA36 /* main.m in Sources */,
 				5E76FE791ECEDD77004FDA36 /* LOAppDelegate.m in Sources */,
+				5E3F198C1ED9613A0044079A /* LOPoetryDetailVC.m in Sources */,
 				5E76FE881ECEDF7B004FDA36 /* LOTabBarViewController.m in Sources */,
 				5E3AF85D1ED2C3DE001000A0 /* AFNHttpTools.m in Sources */,
 				5E3AF8601ED2CFE2001000A0 /* LOHomeItemDetailModel.m in Sources */,

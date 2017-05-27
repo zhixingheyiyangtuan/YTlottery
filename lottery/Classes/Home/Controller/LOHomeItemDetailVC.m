@@ -68,8 +68,8 @@
 - (void)viewDidLoad {
    [super viewDidLoad];
     [self showLoadingViewWithMessage:@"正在加载中。。"];
-    [self setNavigationBarTittle:self.mainModel.text];
-    [self setNavigationBarWithLeftBarItemImage:@"nav_fanhui" rightBarIteImage:nil];
+    self.navigationItem.title = self.mainModel.text;
+//    [self setNavigationBarWithLeftBarItemImage:@"nav_fanhui" rightBarIteImage:nil];
     [self createUI];
 }
 

@@ -26,9 +26,11 @@
         [self setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [self setTitleColor:LOColor(234, 103, 7 , 1) forState:UIControlStateSelected];
         
-        if (!iOS7) { // 非iOS7下,设置按钮选中时的背景
-            [self setBackgroundImage:[UIImage imageWithName:@"tabbar_slider"] forState:UIControlStateSelected];
-        }
+    
+        [self setBackgroundImage:[UIImage imageNamed:@"背景"] forState:0];
+        
+//        [self setBackgroundImage:[UIImage imageWithName:@"tabbar_slider"] forState:UIControlStateSelected];
+        
         
     }
     return self;
