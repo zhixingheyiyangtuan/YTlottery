@@ -51,6 +51,7 @@
 		5E3AF8621ED2D745001000A0 /* LOHomeItemDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeItemDetailVC.m; sourceTree = "<group>"; };
 		5E3AF8641ED2E276001000A0 /* LOHomeDetailTopCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeDetailTopCell.h; sourceTree = "<group>"; };
 		5E3AF8651ED2E276001000A0 /* LOHomeDetailTopCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeDetailTopCell.m; sourceTree = "<group>"; };
+		5E3F19791ED916060044079A /* lottery.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = lottery.entitlements; sourceTree = "<group>"; };
 		5E4AD73E1ED2AD8A00AE5980 /* LOHomeMainModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainModel.h; sourceTree = "<group>"; };
 		5E4AD73F1ED2AD8A00AE5980 /* LOHomeMainModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LOHomeMainModel.m; sourceTree = "<group>"; };
 		5E4AD7411ED2ADB900AE5980 /* LOHomeMainItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LOHomeMainItemView.h; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		5E76FE5D1ECED9B3004FDA36 /* lottery */ = {
 			isa = PBXGroup;
 			children = (
+				5E3F19791ED916060044079A /* lottery.entitlements */,
 				5E76FE751ECEDD4E004FDA36 /* Classes */,
 				5E76FE671ECED9B3004FDA36 /* Main.storyboard */,
 				5E76FE6A1ECED9B3004FDA36 /* Assets.xcassets */,
@@ -435,8 +437,13 @@
 				TargetAttributes = {
 					5E76FE5A1ECED9B3004FDA36 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 876UH3YYVA;
+						DevelopmentTeam = W56C3UP3TQ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -669,16 +676,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = lottery/lottery.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Qingguang Pan (Y245MCE354)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 876UH3YYVA;
+				DEVELOPMENT_TEAM = W56C3UP3TQ;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = lottery/Classes/Other/LOPrefixHeader.pch;
 				INFOPLIST_FILE = lottery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = createa.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotteryTuan.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
@@ -689,16 +699,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = lottery/lottery.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Qingguang Pan (Y245MCE354)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 876UH3YYVA;
+				DEVELOPMENT_TEAM = W56C3UP3TQ;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = lottery/Classes/Other/LOPrefixHeader.pch;
 				INFOPLIST_FILE = lottery/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = createa.lottery;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lotteryTuan.cn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;

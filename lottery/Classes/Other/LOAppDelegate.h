@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+static NSString *appKey = @"48fc5a5d922744de42586c98";
+static NSString *channel = @"Publish channel";
+static BOOL isProduction = FALSE;
 
 @interface LOAppDelegate : UIResponder <UIApplicationDelegate>
 
