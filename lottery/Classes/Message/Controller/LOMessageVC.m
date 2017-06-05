@@ -27,7 +27,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.meTableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
     //设置背景图片
-    self.meTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"背景"]];
+//    self.meTableView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"背景"]];
     [self.view addSubview:self.meTableView];
 }
 

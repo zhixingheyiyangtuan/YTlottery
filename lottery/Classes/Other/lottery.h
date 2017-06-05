@@ -42,4 +42,6 @@
 #define lotteryListDetail          @"http://f.apiplus.net/"
 
 
+#define weichatListHeader             @"https://api.tianapi.com/wxnew/?"
+
 #endif /* lottery_h */

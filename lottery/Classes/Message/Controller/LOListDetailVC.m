@@ -41,8 +41,6 @@
     
     [self addRefreshControl];
     
-   
-    
 }
 
 
@@ -72,7 +70,6 @@
 
 -(void)requestToServer{
     
-    
     NSString *tempUrl = [NSString stringWithFormat:@"%@%@-%ld.json",lotteryListDetail,self.listModel.url,(long)self.item];
     
     NSLog(@"%@",tempUrl);
@@ -82,7 +79,6 @@
         if (self.item <= 20) {
              self.item = self.item + 5;
         }
-       
 //            [self hideLoadingView];
         
             self.lOListDetailModel = [LOListDetailModel mj_objectWithKeyValues:dict];
@@ -91,7 +87,6 @@
         
         [self.listDetailArray removeAllObjects];
        
-        
         [self.listDetailArray addObjectsFromArray:tempArray];
 //
 //            self.detailModel = detailModel;
@@ -101,13 +96,12 @@
             
         // 让刷新控件停止显示刷新状态
         [self.meTableView.mj_header endRefreshing];
-         [self.meTableView.mj_footer endRefreshing];
+        [self.meTableView.mj_footer endRefreshing];
      
         if (self.item == 25) {
              [self.meTableView.mj_footer endRefreshingWithNoMoreData];
         }
        
-        
     } failed:^(NSError *err) {
         [self hideLoadingView];
         // 让刷新控件停止显示刷新状态

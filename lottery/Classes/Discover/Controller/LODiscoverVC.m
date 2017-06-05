@@ -71,7 +71,7 @@
 
     self.view.backgroundColor = [UIColor whiteColor];
     //设置collectionView背景图片
-    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"背景"]];
+//    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"背景"]];
     [self.view addSubview:self.collectionView];
 }
 

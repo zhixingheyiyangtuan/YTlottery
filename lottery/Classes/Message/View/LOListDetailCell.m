@@ -9,11 +9,8 @@
 #import "LOListDetailCell.h"
 
 #define VIEWBORDER 10 *autoSizeScaleX
-
-
 #define VIEWHEIGHT 30 *autoSizeScaleY
 #define VIEWTOP 0 *autoSizeScaleY
-
 #define CELLNAMEFONT FontWithSize(15)
 
 @interface LOListDetailCell()
@@ -34,8 +31,6 @@
     if (!cell) {
         [tableView registerClass:self forCellReuseIdentifier:ID];
         cell = [tableView dequeueReusableCellWithIdentifier:ID];
-        
-       
         
     }
    
@@ -132,6 +127,24 @@
     }];
     
     
+}
+
+
+- (void)drawRect:(CGRect)rect {
+    
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [UIColor clearColor].CGColor);
+    
+    CGContextFillRect(context, rect);
+    
+    //上分割线，
+    //CGContextSetStrokeColorWithColor(context, COLORWHITE.CGColor);
+    //CGContextStrokeRect(context, CGRectMake(5, -1, rect.size.width - 10, 1));
+    
+    //下分割线
+    CGContextSetStrokeColorWithColor(context,SYSTEMCOLOR.CGColor);
+    CGContextStrokeRect(context,CGRectMake(10 *autoSizeScaleX, rect.size.height-0.1 *autoSizeScaleY, SCREEN_WIDTH-20 *autoSizeScaleX,0.1 *autoSizeScaleY));
 }
 
 @end
