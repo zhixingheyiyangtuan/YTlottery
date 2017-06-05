@@ -97,9 +97,8 @@
         self.awardNumberLabel.backgroundColor = BACKGROUNDCOLOR;
     }
 
-
-
 }
+
 -(void)layoutSubviews{
     
     

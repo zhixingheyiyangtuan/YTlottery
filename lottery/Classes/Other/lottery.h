@@ -38,6 +38,8 @@
 
 // 8.请求
 #define lotteryRequestHeader          @"http://apicloud.mob.com/lottery/query?key=1cfe8e5baeca0"
+// 8.请求
+#define lotteryListDetail          @"http://f.apiplus.net/"
 
 
 #endif /* lottery_h */

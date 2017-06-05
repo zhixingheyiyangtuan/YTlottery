@@ -8,6 +8,7 @@
 
 #import "LOMessageVC.h"
 #import "LOListModel.h"
+#import "LOListDetailVC.h"
 @interface LOMessageVC ()
 
 @property(nonatomic,strong)NSArray *lotteryArray;
@@ -73,9 +74,22 @@
 }
 
 
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    
+    return 0.001*autoSizeScaleY;
+    
+}
+
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
 
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    LOListModel *listModel = self.lotteryArray[indexPath.row];
+    
+   LOListDetailVC *detailVC =  [[LOListDetailVC alloc]init];
+    
+    detailVC.listModel = listModel;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
 
 
 }

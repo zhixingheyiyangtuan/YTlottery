@@ -6,7 +6,163 @@
 		<key>title</key>
 		<string>福彩3d</string>
 		<key>url</key>
-		<string>http://f.apiplus.net/fc3d.json</string>
+		<string>fc3d</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>六场半全场</string>
+		<key>url</key>
+		<string>zcbqc</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>四场进球彩</string>
+		<key>url</key>
+		<string>zcjqc</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>十四场胜负彩(任9)</string>
+		<key>url</key>
+		<string>zcjqc</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>安徽11选5 - 高频</string>
+		<key>url</key>
+		<string>ah11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>北京11选5 - 高频</string>
+		<key>url</key>
+		<string>bj11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>福建11选5 - 高频</string>
+		<key>url</key>
+		<string>fj11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>广东11选5 - 高频</string>
+		<key>url</key>
+		<string>gd11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>甘肃11选5 - 高频</string>
+		<key>url</key>
+		<string>gs11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>广西11选5 - 高频</string>
+		<key>url</key>
+		<string>gx11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>贵州11选5 - 高频</string>
+		<key>url</key>
+		<string>gz11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>河北11选5 - 高频</string>
+		<key>url</key>
+		<string>he11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>黑龙江11选5 - 高频</string>
+		<key>url</key>
+		<string>hlj11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>湖北11选5 - 高频</string>
+		<key>url</key>
+		<string>hub11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>吉林11选5 - 高频</string>
+		<key>url</key>
+		<string>jl11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>江苏11选5 - 高频</string>
+		<key>url</key>
+		<string>js11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>江西11选5 - 高频</string>
+		<key>url</key>
+		<string>jx11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>辽宁11选5 - 高频</string>
+		<key>url</key>
+		<string>ln11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>内蒙古11选5 - 高频</string>
+		<key>url</key>
+		<string>nmg11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>山东11选5 - 高频</string>
+		<key>url</key>
+		<string>sd11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>上海11选5 - 高频</string>
+		<key>url</key>
+		<string>sh11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>陕西11选5 - 高频</string>
+		<key>url</key>
+		<string>sxl11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>山西11选5 - 高频</string>
+		<key>url</key>
+		<string>sxr11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>天津11选5 - 高频</string>
+		<key>url</key>
+		<string>tj11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>新疆11选5 - 高频</string>
+		<key>url</key>
+		<string>xj11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>云南11选5 - 高频</string>
+		<key>url</key>
+		<string>yn11x5</string>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>浙江11选5 - 高频</string>
+		<key>url</key>
+		<string>zj11x5</string>
 	</dict>
 </array>
 </plist>

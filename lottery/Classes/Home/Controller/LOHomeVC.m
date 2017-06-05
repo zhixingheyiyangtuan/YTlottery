@@ -42,6 +42,7 @@
     [super viewDidLoad];
 //    self.view.backgroundColor = [UIColor whiteColor];
     // 访问本地plist文件获取数据源
+    
     self.mainItemView.collectionArr = [LOHomeMainModel mj_objectArrayWithFilename:@"HomePage.plist"];
     
      [self.view addSubview:self.mainItemView];

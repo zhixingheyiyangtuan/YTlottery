@@ -81,7 +81,7 @@
     
     // 2.消息
     LOMessageVC *messageVC = [[LOMessageVC alloc] init];
-    [self setupChildViewController:messageVC title:@"消息" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
+    [self setupChildViewController:messageVC title:@"快查" imageName:@"tabbar_message_center" selectedImageName:@"tabbar_message_center_selected"];
     
     // 3.广场
     LODiscoverVC *discoverVC = [[LODiscoverVC alloc] init];

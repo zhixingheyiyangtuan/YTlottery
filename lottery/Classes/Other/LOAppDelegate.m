@@ -69,7 +69,6 @@
     
 }
 
-
 - (void)application:(UIApplication *)application
 didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     //    NSString *tempStr = [NSString stringWithFormat:@"%@", deviceToken];
