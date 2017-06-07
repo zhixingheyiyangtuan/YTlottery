@@ -98,6 +98,7 @@
 }
 
 -(void)layoutSubviews{
+    [super layoutSubviews];
     
     self.expectLabel.font = FontWithSize(20);
     
