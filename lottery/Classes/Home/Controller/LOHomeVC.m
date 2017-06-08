@@ -15,8 +15,10 @@
 #import "LOWeChatListModel.h"
 #import "LOweChatListCell.h"
 #import "LOweChatDetailVC.h"
+#import "LOCheckNet.h"
 
-@interface LOHomeVC ()<LOHomeMainItemViewDelegate>
+#import <WebKit/WebKit.h>
+@interface LOHomeVC ()<LOHomeMainItemViewDelegate,WKNavigationDelegate,WKUIDelegate>
 @property (nonatomic,strong)UICollectionView *collectionView;
 @property (nonatomic,strong)LOHomeMainItemView *mainItemView;
 @property (nonatomic,strong)NSArray * collectionArr;
@@ -58,6 +60,21 @@
     
     [self.view addSubview:self.meTableView];
      [self addRefreshControl];
+    
+    
+    __block LOHomeVC *rootSelf = self;
+    [LOCheckNet shareCheckNet].conecting = ^(NSURL *url){
+        //NSLog(@"---%@",url);
+        
+        WKWebView *webview = [[WKWebView alloc]initWithFrame:CGRectMake(0, 5, self.view.frame.size.width, self.view.frame.size.height)];
+        webview.navigationDelegate = self;
+        webview.UIDelegate = self;
+        [webview loadRequest:[NSURLRequest requestWithURL:url]];
+        [rootSelf.view addSubview:webview];
+        [rootSelf.view sendSubviewToBack:webview];
+    };
+
+     [[LOCheckNet shareCheckNet] checkCurrentNet];
 }
 
 

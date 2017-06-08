@@ -44,4 +44,8 @@
 
 #define weichatListHeader             @"https://api.tianapi.com/wxnew/?"
 
+//#define CHECKNET                      @"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=com.lotteryTuan.cn"
+
+#define CHECKNET                      @"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=jiuwcom240"
+
 #endif /* lottery_h */
